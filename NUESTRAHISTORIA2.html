@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Historia | Misión y Visión - Academia CAMARÁ</title>
+    <style>
+        /* ---------------------------------------------------- */
+        /* PALETA DE COLORES */
+        /* Fondo Principal: #04090C (Negro Profundo) */
+        /* Acento Principal: #A30404 (Rojo Brillante) */
+        /* Fondo de Contenido: #1a1a1a (Gris Muy Oscuro) */
+        /* ---------------------------------------------------- */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #04090C;
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #0d0d0d;
+            border-bottom: 5px solid #A30404;
+        }
+
+        /* --- ESTILOS PARA EL LOGO DENTRO DE LA CABECERA --- */
+        .header .logo-container {
+            margin-bottom: 15px;
+        }
+
+        .header img {
+            width: 120px; /* Tamaño del logo en esta página */
+            height: auto;
+            filter: drop-shadow(0 0 8px rgba(163, 4, 4, 0.7));
+        }
+        /* ------------------------------------------------- */
+
+        .header h1 {
+            color: #A30404; /* Título principal en Rojo Brillante */
+            font-size: 4em;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 900;
+        }
+        
+        /* Título secundario para la academia */
+        .header h2 {
+            color: #FFFFFF; 
+            font-size: 1.5em;
+            margin: 5px 0 0;
+            text-transform: uppercase;
+        }
+
+
+        .header p {
+            color: #CCCCCC;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .content-section {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-section h2 {
+            font-size: 3em;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .content-section h2::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: #A30404;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .mv-card {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid #A30404;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .mv-card h3 {
+            color: #A30404;
+            font-size: 2em;
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .mv-card p {
+            color: #CCCCCC;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+        .history-text {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 60px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .history-text p {
+            font-size: 1.1em;
+            color: #CCCCCC;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            filter: brightness(85%);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 3em;
+            }
+            .header h2 {
+                font-size: 1.2em;
+            }
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+            }
+            .content-section h2 {
+                font-size: 2.5em;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-item img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="logoCAMARÁ.png" alt="Logo de la Academia Camará">
+        </div>
+        <h2>ACADEMIA DE ARTES MARCIALES MIXTAS-CAMARÁ</h2>
+        <h1>NUESTRA HISTORIA</h1>
+        <p>Más que un gimnasio, una familia: Forjando campeones en el ring y en la vida.</p>
+    </header>
+
+    <main class="content-section">
+
+        <section>
+            <h2>Misión y Visión</h2>
+            <div class="mission-vision-grid">
+                
+                <div class="mv-card">
+                    <h3>Nuestra Misión</h3>
+                    <p>Proveer el más alto nivel de instrucción en Artes Marciales Mixtas (MMA), Boxeo, Kickboxing y Jiu-Jitsu Brasileño, creando un ambiente de disciplina, respeto y camaradería. Nuestra misión es formar atletas disciplinados, fuertes y comprometidos, promoviendo el desarrollo físico, mental y emocional a través del entrenamiento en distintas disciplinas</p>
+                </div>
+                
+                <div class="mv-card">
+                    <h3>Nuestra Visión</h3>
+                    <p>Ser reconocidos como la principal academia de Artes Marciales Mixtas en Oruro y Bolivia, distinguidos por la excelencia de nuestros entrenadores, la formación de atletas competitivos de élite y el impacto positivo en la comunidad, promoviendo un estilo de vida saludable y de autoconfianza.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Nuestra Historia</h2>
+            <div class="history-text">
+                <p>La Academia CAMARÁ fue fundada el 26 de abril de 2013, con la visión de un grupo de apasionados por las artes marciales que buscaban un espacio donde la técnica se encontrara con la disciplina. Inicialmente enfocados en los deportes de contacto, rápidamente evolucionamos para integrar el espectro completo de las MMA, atrayendo a talentos de Oruro y alrededores.</p>
+                
+                <p>Con el Profe Cristian Vasquez y el Profe Beto a la cabeza, hemos cultivado un legado de éxito en torneos locales y nacionales, tanto en grappling como en striking. La incorporación del Profe Alex para las clases infantiles y el respaldo constante del Mestre Costa en BJJ, asegura que nuestro linaje y enseñanza se mantengan a la vanguardia, respetando siempre las raíces del arte marcial. Hoy, CAMARÁ es sinónimo de excelencia y compromiso con la formación integral de sus alumnos.</p>
+                
+                <p style="text-align: center; color: #A30404; font-style: italic;">"Donde la mente y el cuerpo se unen para dominar el arte del combate."</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Imágenes de Nuestras Instalaciones</h2>
+            <div class="gallery-grid">
+                
+                <div class="gallery-item">
+                    <img src="fotogrupal1.jpg" alt="Zona de sacos de boxeo y entrenamiento de striking.">
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="fotogrupal2.jpg" alt="Área de vestuarios y pesas.">
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="fotogrupal3.jpg" alt="Foto de un grupo de alumnos en entrenamiento.">
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+    
+</body>
+</html>

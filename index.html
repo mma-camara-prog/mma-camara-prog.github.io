@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACADEMIA DE ARTES MARCIALES MIXTAS - CAMARÁ</title>
+    
+    <style>
+        /* Estilos Generales y Reseteo Básico */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white; 
+        }
+
+       
+        .hero-section {
+            
+            background-image: url('FONDITO.jfif'); 
+            
+            background-size: cover; 
+            background-position: center; 
+            min-height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .navbar {
+            padding: 15px 30px;
+            background-color: rgba(0, 0, 0, 0.5); 
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* CAMBIO DE COLOR 1: Título de la Academia */
+        .logo-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: dark red ; /* ROJO OSCURO */
+            text-shadow: 0 0 5px black;
+        }
+
+        /* Estilos del Menú de Opciones (Lista) */
+        .nav-menu {
+            list-style: none; /* Quita los puntos de la lista */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px; /* Espacio entre los elementos del menú */
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: color 0.3s;
+            text-transform: uppercase;
+        }
+
+        /* CAMBIO DE COLOR 2: Efecto Hover del Menú */
+        .nav-menu a:hover {
+            color: dark red; /* ROJO OSCURO al pasar el ratón */
+        }
+
+        /* Contenido Central (Logo y Títulos) */
+        .hero-content {
+            flex-grow: 1; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            padding: 20px;
+        }
+
+        .academy-logo {
+            width: 240px; 
+            height: auto;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8)); 
+        }
+
+        .main-title {
+            font-size: 5em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Contenedor de Botones - HORIZONTAL */
+        .button-container {
+            display: flex; 
+            gap: 20px; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+        }
+
+        /* Estilos de los Botones */
+        .hero-button {
+            text-decoration: none; 
+            color: white;
+            border: 2px solid white;
+            padding: 12px 25px;
+            font-size: 1em;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
+            background-color: rgba(255, 255, 255, 0.1); 
+            border-radius: 5px; 
+        }
+
+        /* CAMBIO DE COLOR 3: Efecto Hover del Botón */
+        .hero-button:hover {
+            background-color: darkred; /* ROJO OSCURO al pasar el ratón */
+            border-color: #CC0000;
+            color: white; /* Cambié a blanco para que resalte más sobre el rojo oscuro */
+        }
+
+        /* Media Query para responsividad en móviles */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+            .logo-title {
+                margin-bottom: 10px;
+            }
+            .nav-menu {
+                gap: 10px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .button-container {
+                flex-direction: column; 
+                gap: 15px;
+            }
+            .hero-button {
+                width: 80vw; 
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            .main-title {
+                font-size: 3em; 
+            }
+        }
+        .about-us-section {
+            background-color: black; /* Fondo muy oscuro, casi negro */
+            background-image: linear-gradient(to right, #19171b, #75020f); /* El degradado de negro a rojo */
+            padding: 80px 5%; /* Espacio interno grande */
+            text-align: center;
+            color: white; /* Texto blanco grisáceo */
+        }
+        
+        /* Título ¿QUIÉNES SOMOS? (Grande, bonito y con colorimetría) */
+        .about-us-title {
+            font-size: 3.5em; /* Tamaño grande */
+            color: dark red ; /* Color de acento Rojo */
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            font-weight: 900; /* Negrita/Extra-bold para impacto */
+            letter-spacing: 3px;
+        }
+
+        /* Texto de la respuesta */
+        .about-us-text {
+            font-size: 1.3em;
+            max-width: 900px; /* Limita el ancho del texto para mejor lectura */
+            margin: 0 auto; /* Centra el bloque de texto */
+            line-height: 1.6; /* Espacio entre líneas para facilitar la lectura */
+            font-weight: 300;
+        }
+
+        /* Responsive para móviles */
+        @media (max-width: 600px) {
+            .about-us-title {
+                font-size: 2.5em;
+            }
+            .about-us-text {
+                font-size: 1.1em;
+            }
+        }
+        /* ---------------------------------------------------- */
+        /* Estilos de la Sección NUESTRAS DISCIPLINAS */
+        /* ---------------------------------------------------- */
+        .disciplines-section {
+            background-color: #33080A; /* Fondo oscuro ligeramente diferente */
+            padding: 80px 5%; 
+            text-align: center;
+        }
+
+        /* Título NUESTRAS DISCIPLINAS (Misma tipografía que ¿QUIÉNES SOMOS?) */
+        .disciplines-title {
+            font-size: 3.5em; 
+            color: #FFFFFF; /* Color de acento Rojo */
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            font-weight: 900; 
+            letter-spacing: 3px;
+        }
+
+        /* Contenedor de la Cuadrícula de Disciplinas */
+        .disciplines-grid {
+            display: grid;
+            /* Crea 3 columnas de igual ancho, con un espacio de 30px entre ellas */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilos de cada Cuadro (Disciplina) */
+        .discipline-card {
+            background-color: #0d0d0d; /* Fondo muy oscuro para el cuadro */
+            border: 1px solid rgba(204, 0, 0, 0.3); /* Borde sutil rojo */
+            border-radius: 8px;
+            overflow: hidden; /* Asegura que la imagen no se salga del borde */
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left;
+        }
+        
+        /* Efecto al pasar el ratón */
+        .discipline-card:hover {
+            transform: translateY(-5px); /* Se levanta un poco */
+            box-shadow: 0 10px 20px rgba(204, 0, 0, 0.4); /* Sombra roja */
+        }
+
+        /* Imagen de la Disciplina */
+        .discipline-card img {
+            width: 100%;
+            height: 200px; /* Altura fija para todas las imágenes */
+            object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+        }
+
+        /* Contenido de Texto de la Disciplina */
+        .discipline-content {
+            padding: 20px;
+        }
+
+        .discipline-content h3 {
+            color: #CC0000; /* Título de la disciplina en rojo */
+            text-transform: uppercase;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .discipline-content p {
+            color: #ccc; /* Texto ligeramente gris */
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        .preinscription-button {
+            display: block;
+            width: 90%; 
+            margin: 20px auto 0 auto;
+            background-color: #4D4D4D; 
+            color: #000002; 
+            border: 2px solid #4D4D4D;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efecto Elegante al pasar el ratón: Invertir colores */
+        .preinscription-button:hover {
+            background-color: #AAA8AD; 
+            color: #000002; 
+            box-shadow: 0 0 15px rgba(204, 0, 0, 0.7); 
+        }
+
+        /* Responsive para pantallas muy pequeñas (ajusta la altura de la imagen) */
+        @media (max-width: 600px) {
+            .disciplines-title {
+                font-size: 2.5em;
+            }
+            .discipline-card img {
+                height: 150px;
+            }
+        }
+        /* ---------------------------------------------------- */
+        /* Estilos de la Sección HORARIOS - PALETA MEJORADA */
+        /* ---------------------------------------------------- */
+        .schedule-section {
+            background-color: #313131; /* Fondo Negro Profundo (Paleta) */
+            padding: 80px 5%;
+            text-align: center;
+            color: #FFFFFF; /* Texto Blanco */
+        }
+
+        /* Título HORARIOS */
+        .schedule-title {
+            font-size: 3.5em; 
+            color: #FFFFFF; /* Rojo Brillante (Paleta) */
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            font-weight: 900; 
+            letter-spacing: 3px;
+        }
+
+        /* Estilos para el Bloque de Horarios (Mañana y Noche) */
+        .schedule-block {
+            margin-bottom: 60px;
+        }
+
+        /* Título de los turnos (Mañana/Noche) */
+        .turn-title {
+            font-size: 2.2em;
+            color: #FFFFFF;
+            margin: 0 0 5px;
+            text-transform: uppercase;
+        }
+        
+        /* Subtítulo del turno (Edades/Enfoque) */
+        .turn-subtitle {
+            font-size: 1em;
+            color: #A30404; /* Rojo para destacar la información clave */
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        /* Contenedor principal de la tabla de horarios */
+        .schedule-table-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            /* Borde Gris Sutil de la Paleta */
+            border: 1px solid #736D66; 
+            border-radius: 8px;
+            overflow: hidden; 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); 
+        }
+
+        /* Estilos de la Tabla */
+        .schedule-table {
+            display: grid;
+            grid-template-columns: 1fr repeat(5, 1.2fr); 
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        /* Estilos para las Celdas de la Tabla */
+        .schedule-cell {
+            padding: 15px 10px;
+            border: 1px solid #333; /* Separación oscura */
+            background-color: #04090C; /* Fondo Negro Profundo */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        /* CAMBIO CLAVE: Estilos para el Encabezado de la Tabla (DÍAS) */
+        .schedule-header {
+            background-color: #AAA8AD; /* FONDO GRIS OSCURO (Paleta) */
+            color: #04090C; /* Texto Negro para contraste elegante */
+            font-weight: bold;
+            font-size: 1em;
+            border: 1px solid #736D66;
+        }
+
+        /* Estilos específicos para la columna de las horas */
+        .time-slot {
+            background-color: #1a1a1a; 
+            font-weight: bold;
+            color: #A30404; /* Rojo para acentuar el tiempo */
+        }
+        
+        /* Estilos de celda sin clase */
+        .no-class {
+            background-color: #0d0d0d;
+            color: #555;
+            font-style: italic;
+            font-size: 0.8em;
+        }
+        
+        /* Contenido de la clase */
+        .discipline-name {
+            font-weight: bold;
+            margin-bottom: 2px;
+            color: #FFFFFF; /* Nombre de la clase en blanco */
+        }
+        .discipline-time {
+            font-size: 0.75em;
+            color: #CCCCCC;
+        }
+
+        /* Responsive: Ajustes en pantallas pequeñas */
+        @media (max-width: 700px) {
+            .schedule-table {
+                grid-template-columns: 1fr 1fr; 
+            }
+            .schedule-cell {
+                font-size: 0.8em;
+                padding: 10px 5px;
+            }
+            .schedule-title {
+                font-size: 2.5em;
+            }
+        }
+
+        /* ---------------------------------------------------- */
+        /* Estilos de la Sección PRODUCTOS (EQUIPAMIENTO) */
+        /* ---------------------------------------------------- */
+        .products-section {
+            background-color: #313B44; /* Fondo oscuro intermedio */
+            padding: 80px 5%;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .products-title {
+            font-size: 3.5em; 
+            color: #FFFFFF; /* Título principal en blanco, fuerte contraste */
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: 900; 
+            letter-spacing: 3px;
+        }
+        
+        .products-subtitle {
+            font-size: 1.2em;
+            color: #A30404; /* Subtítulo en rojo */
+            margin-bottom: 50px;
+        }
+
+/* Contenedor de la cuadrícula de productos */
+.products-grid {
+    display: grid;
+    /* 4 columnas en desktop, se ajusta automáticamente */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px; /* Ya lo tenías */
+    margin: 0 auto; /* Ya lo tenías (necesario para centrar el grid completo) */
+
+    /* ✨ ESTO ES CLAVE: Permite que el contenedor del grid se encoja al contenido. */
+    width: fit-content; 
+
+    /* Centra los elementos de la cuadrícula dentro de ese nuevo ancho. */
+    justify-content: center; 
+}
+
+        /* Estilos de cada Tarjeta de Producto */
+        .product-card {
+            background-color: #2e2e2e; /* Fondo de la tarjeta GRIS OSCURO */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+            text-align: left;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Área de la imagen del producto (Fondo blanco/claro) */
+        .product-image-area {
+            background-color: #f0f0f0; /* Fondo Blanco Grisáceo (NO blanco puro) */
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 250px;
+        }
+
+        .product-image-area img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Contenido de la Tarjeta */
+        .product-content {
+            padding: 15px 20px 20px;
+        }
+        
+        .product-content h3 {
+            color: #A30404; /* Título del producto en rojo */
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 1.4em;
+        }
+
+        .product-content p {
+            color: #ccc;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        /* Precio y Botón */
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            border-top: 1px solid #333;
+            padding-top: 15px;
+        }
+
+        .product-price {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #FFFFFF; 
+        }
+
+        .buy-button {
+            text-decoration: none;
+            background-color: #A30404; /* Fondo del botón en Rojo */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+        }
+
+        .buy-button:hover {
+            background-color: #CC0000; /* Rojo más oscuro al pasar el ratón */
+        }
+        
+        /* Etiqueta (Ej: Llamativo) */
+        .product-tag {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #A30404;
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            border-radius: 8px 0 8px 0;
+        }
+
+        /* Estilos de las características del producto */
+        .product-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        
+        .product-features li {
+            text-align: left;
+            font-size: 0.9em;
+            color: #CCCCCC;
+            line-height: 1.5;
+            padding-left: 20px;
+            position: relative;
+        }
+        /* Icono de checkmark personalizado (usando el color de acento) */
+        .product-features li::before {
+            content: '✓'; 
+            color: #A30404; 
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+.trainers-section {
+        background-color: #222222; /* Negro Profundo */
+        padding: 80px 5%;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .trainers-title {
+        font-size: 3.5em; 
+        color: #FFFFFF;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-weight: 900; 
+        letter-spacing: 3px;
+    }
+    
+    .trainers-subtitle {
+        font-size: 1.2em;
+        color: #A30404; /* Rojo de acento */
+        margin-bottom: 50px;
+    }
+
+    .trainers-grid {
+        display: grid;
+        /* 4 columnas para los 4 instructores */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .trainer-card {
+        background-color: #070709; 
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s;
+        text-align: left;
+    }
+    
+    .trainer-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px rgba(163, 4, 4, 0.5); /* Sombra roja al pasar el ratón */
+    }
+
+    .trainer-image-area {
+        height: 350px; 
+        overflow: hidden;
+        position: relative;
+    }
+
+    .trainer-image-area img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        transition: filter 0.3s;
+    }
+    
+    .trainer-card:hover .trainer-image-area img {
+        filter: grayscale(0%) brightness(100%); /* Color al pasar el ratón */
+    }
+
+    .trainer-info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Gradiente oscuro en la parte inferior de la imagen */
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .trainer-info h3 {
+        margin: 0;
+        color: #E62815; /* Rojo de acento */
+        font-size: 1.5em;
+    }
+    
+    .trainer-info p {
+        margin: 5px 0 0;
+        color: #FFFFFF;
+        font-size: 1em;
+    }
+
+    .trainer-content {
+        padding: 20px;
+    }
+    
+    .trainer-content h4 {
+        color: #736D66; /* Gris Oscuro */
+        text-transform: uppercase;
+        font-size: 0.9em;
+        margin-top: 0;
+    }
+
+    .trainer-features {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    
+    .trainer-features li {
+        font-size: 0.9em;
+        color: #CCCCCC;
+        line-height: 1.5;
+        padding-left: 20px;
+        position: relative;
+    }
+    
+    .trainer-features li::before {
+        content: '✓'; 
+        color: #A30404; /* Rojo de acento */
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+    }
+    
+    /* Media Query para responsividad en móviles */
+    @media (max-width: 768px) {
+        .trainers-title {
+            font-size: 2.2em; 
+        }
+        .trainers-grid {
+            grid-template-columns: 1fr;
+        }
+        .trainer-image-area {
+            height: 300px;
+        }
+    }
+    .contact-section {
+        /* Fondo Negro Profundo para la sección completa */
+        background-color: #04090C; 
+        padding: 80px 5%;
+        color: #f5f5f5;
+    }
+    .contact-title {
+        font-size: 3.5em; 
+        color: #FFFFFF;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-weight: 900; 
+        letter-spacing: 3px;
+        text-align: center;
+    }
+    
+    .contact-subtitle {
+        font-size: 1.2em;
+        color: #A30404; /* Rojo de acento */
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr; /* Una columna para info, otra más grande para el mapa */
+        gap: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        /* Contenedor principal con fondo gris muy oscuro para separar visualmente */
+        background-color: #1a1a1a; 
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .contact-info, .location-info {
+        padding: 0;
+    }
+
+    /* Estilo para los títulos H2 */
+    .contact-info h2, .location-info h2 {
+        font-size: 2.2em;
+        color: #FFFFFF; /* Título principal en blanco */
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        font-weight: bold;
+        border-bottom: 3px solid #A30404; /* Línea de acento roja bajo el título */
+        padding-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    /* Contenedor de Detalles (Dirección, Teléfono, Email) */
+    .detail-item {
+        display: flex;
+        align-items: flex-start; /* Alinea íconos arriba */
+        margin-bottom: 20px;
+        font-size: 1.1em;
+    }
+    
+    .detail-item strong {
+        display: block;
+        color: #FFFFFF; /* Texto principal en blanco */
+        margin-bottom: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .detail-item p {
+        margin: 0;
+        color: #CCCCCC; /* Texto secundario en gris claro */
+    }
+
+    /* Ícono */
+    .icon {
+        font-size: 1.5em;
+        color: #A30404; /* Rojo de acento */
+        margin-right: 15px;
+        width: 30px; 
+        text-align: center;
+        /* Para que el ícono tenga forma de círculo, como en el bosquejo */
+        background-color: rgba(163, 4, 4, 0.1); 
+        border-radius: 50%;
+        padding: 5px;
+    }
+
+    /* Horarios de Atención */
+    .schedule-contact h3 {
+        color: #A30404; /* Subtítulo en rojo */
+        font-size: 1.5em;
+        margin-top: 40px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+    
+    .schedule-contact p {
+        margin: 5px 0;
+        color: #CCCCCC;
+    }
+
+    /* Mapa (Contenedor para el iframe) */
+    .map-container {
+        background-color: #04090C; /* Negro Profundo */
+        height: 450px; /* Altura fija para el mapa */
+        border-radius: 8px;
+        overflow: hidden;
+        border: 2px solid #736D66; /* Borde gris sutil */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    }
+    
+    /* Estilo para el iframe del mapa */
+    .map-container iframe {
+        /* Se adapta al tamaño del contenedor .map-container */
+        filter: grayscale(30%) brightness(100%); /* Aplica un filtro oscuro al mapa para integrarlo al tema */
+        transition: filter 0.3s;
+    }
+
+    /* Cómo Llegar */
+    .directions h3 {
+        color: #A30404; /* Subtítulo en rojo */
+        font-size: 1.5em;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+    
+    .directions p {
+        margin: 5px 0;
+        color: #CCCCCC;
+        padding-left: 25px;
+        position: relative;
+    }
+    
+    .directions p::before {
+        content: '•';
+        color: #FFFFFF;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        font-size: 1.2em;
+        top: 0;
+    }
+
+    /* Redes Sociales */
+    .social-media h2 {
+        font-size: 1.8em;
+        color: #A30404; /* Título de redes en rojo */
+        margin-top: 50px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    
+    .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        background-color: #04090C; /* Fondo negro profundo */
+        padding: 10px 15px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #CCCCCC;
+        transition: background-color 0.3s, transform 0.2s;
+        flex-grow: 1;
+        max-width: 250px;
+        border: 1px solid #333;
+    }
+
+    .social-link:hover {
+        background-color: #A30404; /* Rojo de acento al pasar el ratón */
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .social-icon {
+        font-size: 1.2em;
+        margin-right: 10px;
+        color: #A30404; /* Rojo de acento para los íconos de redes (sin hover) */
+    }
+    
+    .social-link:hover .social-icon {
+        color: white;
+    }
+
+    /* Media Queries para Móviles */
+    @media (max-width: 768px) {
+        .contact-container {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 20px;
+        }
+        .contact-info h2, .location-info h2 {
+            font-size: 1.8em;
+        }
+        .map-container {
+            height: 250px;
+        }
+        .social-link {
+            max-width: none;
+        }
+    }
+.navbar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    
+    background-color: #04090C; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    padding: 10px 5%;
+    
+    /* Usamos 'space-between' para empujar los dos extremos, 
+       pero damos más espacio al menú en pantallas grandes */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    box-sizing: border-box;
+}
+
+/* 2. LOGO Y TÍTULO (SOLO TÍTULO) */
+.logo-area {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; 
+    text-decoration: none; 
+}
+
+.logo-title {
+    color: #A30404;
+    /* AJUSTE CLAVE: Reducimos el tamaño de la fuente para que quepa */
+    font-size: 1em; /* Reducido de 1.1em a 1.0em */ 
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    padding: 5px 0;
+    /* Añadimos un margen derecho para separarlo visualmente del menú */
+    margin-right: 20px; 
+}
+
+.logo-area:hover .logo-title {
+    color: #FFFFFF; 
+}
+
+
+/* 3. MENÚ DE ENLACES */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    /* Permitimos que la lista ocupe el espacio restante */
+    flex-grow: 1; 
+    justify-content: flex-end; /* Alinea los enlaces a la derecha */
+}
+
+.nav-menu li {
+    /* AJUSTE CLAVE: Reducimos el margen entre ítems */
+    margin-left: 8px; /* Reducido de 10px a 8px */ 
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    display: block;
+    padding: 8px 6px; /* Reducimos el padding horizontal */
+    transition: color 0.3s, border-bottom 0.3s;
+    text-transform: uppercase;
+    /* AJUSTE CLAVE: Reducimos la fuente del enlace */
+    font-size: 0.8em; /* Reducido de 0.85em a 0.8em */
+}
+
+.nav-menu a:hover {
+    color: #A30404;
+    border-bottom: 2px solid #A30404;
+}
+
+/* 4. AJUSTE DE CONTENIDO */
+body {
+    padding-top: 60px; /* Reducimos ligeramente el padding, ya que el menú es más pequeño */
+}
+
+
+/* 5. RESPONSIVIDAD (Móviles) */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px 5%;
+    }
+
+    .logo-area {
+        width: 100%;
+        justify-content: center; 
+        margin-bottom: 10px;
+        margin-right: 0; /* Quitamos el margen derecho */
+    }
+    
+    .logo-title {
+        font-size: 1em; 
+        text-align: center;
+    }
+
+    .nav-menu {
+        width: 100%;
+        justify-content: space-around; 
+        flex-wrap: wrap;
+    }
+
+    .nav-menu li {
+        margin: 5px 0;
+    }
+    
+    .nav-menu a {
+        font-size: 0.8em;
+    }
+    
+    body {
+        padding-top: 100px; /* Ajustamos para el menú apilado */
+    }
+}
+/* Definición del color Rojo Oscuro/Vibrante */
+:root {
+    --rojo-camara: #A50000; /* Puedes cambiar este valor por #CC3333, #B22222, o el que prefieras */
+    --color-texto: #FFFFFF;
+    --color-gris-claro: #CCCCCC;
+}
+
+.main-footer {
+    /* Fondo ROJO para el pie de página principal */
+    background-color: var(--rojo-camara); 
+    color: var(--color-texto);
+    padding: 40px 0 0; /* Espacio superior, sin espacio inferior en el main-footer */
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 30px; /* Espacio horizontal y parte inferior */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea divisoria sutil */
+}
+
+.footer-col {
+    width: 30%; /* Ajusta el ancho de las columnas */
+    max-width: 350px;
+    margin-right: 20px;
+}
+
+.footer-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--color-texto);
+}
+/* Estilo específico para el título principal del gimnasio */
+.academy-info .footer-title {
+    font-family: serif; /* Simula la tipografía del ejemplo */
+    font-size: 2em;
+    font-weight: normal;
+}
+
+/* --- Columna de Información --- */
+.academy-info p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.social-icons a {
+    color: var(--color-texto);
+    border: 1px solid var(--color-texto);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Columna de Enlaces Rápidos --- */
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links li {
+    margin-bottom: 10px;
+}
+
+.quick-links a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.quick-links a:hover {
+    color: var(--color-gris-claro);
+}
+
+/* --- Columna de Contacto --- */
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+/* --- Sección Inferior de Copyright --- */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+    color: var(--color-gris-claro); /* Texto ligeramente más claro */
+}
+
+.footer-meta {
+    display: flex;
+    align-items: center;
+}
+
+.footer-meta span {
+    margin-right: 20px;
+}
+
+.talk-button {
+    color: var(--color-texto);
+    text-decoration: none;
+    border: 1px solid var(--color-texto);
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.talk-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.talk-button i {
+    margin-right: 5px;
+}
+
+/* ------------------------------------------- */
+/* Media Query para hacerlo responsivo */
+/* ------------------------------------------- */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .footer-col {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .contact-info p {
+        /* Centrar los iconos en móvil */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-meta {
+        margin-top: 15px;
+        flex-direction: column;
+    }
+    
+    .footer-meta span {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+/* --- 1. Posicionamiento del Contenedor Flotante --- */
+.redes-flotantes {
+    position: fixed; 
+    bottom: 50px; 
+    right: 20px; 
+    z-index: 1000; 
+}
+
+/* --- 2. Estilos del Botón (Contenedor Circular) --- */
+.redes-flotantes a {
+    display: flex;          /* Centrado horizontal y vertical */
+    justify-content: center; 
+    align-items: center;    
+    margin-bottom: 15px; 
+    width: 55px;          /* Un poco más grande para que el logo quepa bien */
+    height: 55px; 
+    border-radius: 50%; 
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra un poco más fuerte */
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-flotante {
+    background-color: #25D366; 
+}
+
+.redes-flotantes a:hover {
+    transform: scale(1.1); 
+}
+.whatsapp-img-logo {
+    width: 65%; 
+    height: auto; 
+    display: block;  
+}
+/* Quita el subrayado y hace que el color sea el mismo que el texto normal */
+.footer-col a {
+    text-decoration: none;
+    color: inherit; 
+}
+  </style>
+</head>
+<body>
+
+<header class="hero-section">       
+<nav class="navbar">
+    <a href="index.html" class="logo-area">
+        <div class="logo-title">ACADEMIA DE ARTES MARCIALES MIXTAS - CAMARÁ</div>
+    </a>
+    
+    <ul class="nav-menu">
+        <li><a href="#inicio">INICIO</a></li>
+        <li><a href="#clases">CLASES</a></li>
+        <li><a href="#horarios">HORARIOS</a></li>
+        <li><a href="#productos">INDUMENTARIA</a></li>
+        <li><a href="#entrenadores">ENTRENADORES</a></li>
+        <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+</nav>
+        
+        <div class="hero" id="inicio">
+            
+            <img src="logoCAMARÁ.png" alt="Logo de la Academia Camará" class="academy-logo">
+            
+            <h1 class="main-title">¡Despierta tu guerrero interior!</h1>
+              <p>Descubre tu potencial en las artes marciales más efectivas del mundo. Boxeo, Kickboxing, Muay Thai, Jiu-Jitsu Brasileño, Grappling y MMA.</p>
+
+            <div class="button-container">
+                <a href="NUESTRAHISTORIA2.html" class="hero-button">MÁS INFORMACION DE LA ACADEMIA</a>
+                <a href="#contacto" class="hero-button">¿DÓNDE ESTAMOS?</a>
+            </div>
+            
+        </div>
+    </header>
+<section class="about-us-section">
+        <h2 class="about-us-title">¿QUIÉNES SOMOS?</h2>
+        <p class="about-us-text">
+            En MMA-Camará somos más que una Academia de Artes Marciales Mixtas; somos una comunidad dedicada al desarrollo integral de nuestros estudiantes. Nuestra misión es simple: forjar atletas fuertes, disciplinados y seguros de sí mismos, independientemente de su nivel de experiencia.
+        </p>
+    </section>
+<section class="disciplines-section" id="clases"> 
+        <h2 class="disciplines-title">NUESTRAS DISCIPLINAS</h2>
+        
+        <div class="disciplines-grid">
+            
+            <div class="discipline-card">
+                <img src="boxeo..jfif" alt="Imagen de Boxeo">
+                <div class="discipline-content">
+                    <h3>Boxeo</h3>
+                    <p>Enfocada en el juego de pies, la defensa y las combinaciones de puños. Desarrolla velocidad, potencia y resistencia cardiovascular.</p>
+                   <a href="https://forms.gle/ihxJKKhbBeaYEEyF8" target="_blank" class="preinscription-button">¡Preinscríbete!</a>
+                </div>
+            </div>
+
+            <div class="discipline-card">
+                <img src="kickboxing..jfif" alt="Imagen de Kickboxing">
+                <div class="discipline-content">
+                    <h3>Kickboxing</h3>
+                    <p>Combina las técnicas de golpeo del boxeo con patadas poderosas. Ideal para mejorar la coordinación, el equilibrio y la fuerza de impacto.</p>
+                    <a href="https://forms.gle/SQsLsMnPtE4Y5JVv8" target="_blank" class="preinscription-button">¡Preinscríbete!</a>
+                </div>
+            </div>
+
+            <div class="discipline-card">
+                <img src="muaythai..jfif" alt="Imagen de Muay Thai">
+                <div class="discipline-content">
+                    <h3>Muay Thai</h3>
+                    <p>El "Arte de las Ocho Extremidades" utiliza puños, codos, rodillas y patadas. Un entrenamiento completo que exige alta disciplina y aguante.</p>
+                     <a href="https://forms.gle/9mKwMY4YwuG9iv776" target="_blank" class="preinscription-button">¡Preinscríbete!</a>
+                </div>
+            </div>
+
+            <div class="discipline-card">
+                <img src="jiujitsubrasileño..jfif" alt="Imagen de Jiu-Jitsu Brasileño">
+                <div class="discipline-content">
+                    <h3>Jiu-Jitsu Brasileño</h3>
+                    <p>El arte del combate en el suelo. Se centra en palancas, estrangulaciones y posiciones para someter a oponentes más grandes. </p>
+                    <a href="https://forms.gle/XEQChmDVuphVHsEd7" target="_blank" class="preinscription-button">¡Preinscríbete!</a>
+                </div>
+            </div>
+
+            <div class="discipline-card">
+                <img src="grampling..jfif" alt="Imagen de Grappling">
+                <div class="discipline-content">
+                    <h3>Grappling</h3>
+                    <p>Lucha sin gi (uniforme) que combina técnicas de derribo, control posicional y sumisiones. Fundamental para el suelo en MMA.</p>
+                    <a href="https://forms.gle/7j6SNzyNBoczJa6PA" target="_blank" class="preinscription-button">¡Preinscríbete!</a>
+                </div>
+            </div>
+
+            <div class="discipline-card">
+                <img src="MMA..jfif" alt="Imagen de MMA">
+                <div class="discipline-content">
+                    <h3>MMA</h3>
+                    <p>La disciplina cumbre que integra el golpeo y la lucha en el suelo y de pie. Entrenamiento total para dominar todas las distancias.</p>
+                    <a href="https://forms.gle/dVBQA934CT8cNc8w8" target="_blank" class="preinscription-button">¡Preinscríbete!</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+<section class="schedule-section" id="horarios">
+        <h2 class="schedule-title">NUESTROS HORARIOS</h2>
+
+        <div class="schedule-block">
+            <h3 class="turn-title">Turno Mañana</h3>
+            <p class="turn-subtitle">8:30 a 9:30 AM | Mas apta para  Niños Menores de 14 años</p>
+            
+            <div class="schedule-table-container">
+                <div class="schedule-table">
+                    
+                    <div class="schedule-cell schedule-header">Hora</div>
+                    <div class="schedule-cell schedule-header">Lunes</div>
+                    <div class="schedule-cell schedule-header">Martes</div>
+                    <div class="schedule-cell schedule-header">Miércoles</div>
+                    <div class="schedule-cell schedule-header">Jueves</div>
+                    <div class="schedule-cell schedule-header">Viernes</div>
+
+                    <div class="schedule-cell time-slot">8:30 - 9:30 AM</div>
+                    
+                    <div class="schedule-cell">
+                        <span class="discipline-name">Jiujitsu / Grappling</span>
+                    </div>
+
+                    <div class="schedule-cell no-class">---</div>
+                    
+                    <div class="schedule-cell">
+                        <span class="discipline-name">Boxeo / Kickboxing</span>
+                    </div>
+
+                    <div class="schedule-cell no-class">---</div>
+                    
+                    <div class="schedule-cell">
+                        <span class="discipline-name">Jiujitsu / Grappling</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="schedule-block">
+            <h3 class="turn-title">Turno Noche</h3>
+            <p class="turn-subtitle">20:00 a 22:00 PM | Mas apta para Adultos y jóvenes</p>
+            
+            <div class="schedule-table-container">
+                <div class="schedule-table">
+                    
+                    <div class="schedule-cell schedule-header">Hora</div>
+                    <div class="schedule-cell schedule-header">Lunes</div>
+                    <div class="schedule-cell schedule-header">Martes</div>
+                    <div class="schedule-cell schedule-header">Miércoles</div>
+                    <div class="schedule-cell schedule-header">Jueves</div>
+                    <div class="schedule-cell schedule-header">Viernes</div>
+
+                    <div class="schedule-cell time-slot">20:00 - 22:00 PM</div>
+                    
+                    <div class="schedule-cell">
+                        <span class="discipline-name">Jiujitsu / Grappling</span>
+                    </div>
+
+                    <div class="schedule-cell">
+                        <span class="discipline-name">Boxeo / Kickboxing</span>
+                    </div>
+                    
+                    <div class="schedule-cell">
+                        <span class="discipline-name">Jiujitsu / Grappling</span>
+                    </div>
+
+                    <div class="schedule-cell">
+                        <span class="discipline-name">Boxeo / Kickboxing</span>
+                    </div>
+                    
+                    <div class="schedule-cell">
+                        <span class="discipline-name">MMA General</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        </section>
+<section class="products-section" id="productos">
+        <h2 class="products-title"> NUESTRA INDUMENTARIA</h2>
+        <p class="products-subtitle">Equípate con la mejor indumentaria diseñada específicamente para cada disciplina.</p>
+        
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <span class="product-tag">Ataque</span>
+                <div class="product-image-area">
+                    <img src="polerabox.jpeg" alt="Polera de Ataque">
+                </div>
+                <div class="product-content">
+                    <h3>Polera para competir</h3>
+                    <p>Polera técnica para Boxeo, Kickboxing y Muay Thai.</p>
+                    <ul class="product-features">
+                        <li>Tela transpirable</li>
+                        <li>Sacado rápido</li>
+                        <li>Diseño ergonómico</li>
+                        <li>Resistente al desgaste</li>
+                    </ul>
+                    <div class="product-footer">
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="product-tag">Agarre</span>
+                <div class="product-image-area">
+                    <img src="polerabjjj.jpeg" alt="Polera Grappler Pro">
+                </div>
+                <div class="product-content">
+                    <h3>Polera para competir</h3>
+                    <p>Polera diseñada para jiu-jitsu y grappling.</p>
+                    <ul class="product-features">
+                        <li>Anti-agarre</li>
+                        <li>Costuras reforzadas</li>
+                        <li>Ajuste perfecto</li>
+                        <li>Máxima durabilidad</li>
+                    </ul>
+                    <div class="product-footer">
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="product-tag">Conjunto</span>
+                <div class="product-image-area">
+                    <img src="DEPORTIVO.jpg" alt="Conjunto Deportivo Élite">
+                </div>
+                <div class="product-content">
+                    <h3>Conjunto Deportivo</h3>
+                    <p>Conjunto completo de entrenamiento: canguro + buso. Para todas las disciplinas.</p>
+                    <ul class="product-features">
+                        <li>Conjunto completo</li>
+                        <li>Diseño coordinado</li>
+                        <li>Máximo confort</li>
+                        <li>Versatilidad total</li>
+                    </ul>
+                    <div class="product-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="trainers-section" id="entrenadores">
+    <h2 class="trainers-title">NUESTROS ENTRENADORES</h2>
+    <p class="trainers-subtitle">Liderando el cambio en el tatami: Conocimiento, disciplina y experiencia.</p>
+    
+    <div class="trainers-grid">
+        
+        <div class="trainer-card">
+            <div class="trainer-image-area">
+                <img src="CRISTIAN.jpg" alt="Profesor Cristian Vasquez">
+                <div class="trainer-info">
+                    <h3>Prof. Cristian</h3>
+                    <p>Instructor Líder / Competitivo</p>
+                </div>
+            </div>
+            <div class="trainer-content">
+                <h4>Especialista en Competición</h4>
+                <ul class="trainer-features">
+                    <li>Jiujitsu/No-Gi: Control posicional y sumisiones.</li>
+                    <li>Boxeo/Kickboxing: Técnicas de Striking Avanzado.</li>
+                    <li>Entrena de forma competitiva todas las disciplinas.</li>
+                </ul>
+                <p style="font-style: italic; color: #736D66;">"La disciplina no es solo entrenamiento, es una filosofía de vida."</p>
+            </div>
+        </div>
+
+        <div class="trainer-card">
+            <div class="trainer-image-area">
+                <img src="BETOOO.jpg" alt="Profesor Beto">
+                <div class="trainer-info">
+                    <h3>Prof. Beto</h3>
+                    <p>Instructor Competitivo</p>
+                </div>
+            </div>
+            <div class="trainer-content">
+                <h4>Enfoque Competitivo Total</h4>
+                <ul class="trainer-features">
+                    <li>Jiujitsu: Transiciones y lucha en el suelo.</li>
+                    <li>Boxeo/Kickboxing: Potencia y velocidad en el golpeo.</li>
+                    <li>Entrenamiento competitivo en Boxeo, Kickboxing y Jiujitsu.</li>
+                </ul>
+                <p style="font-style: italic; color: #736D66;">"En el combate, la preparación mental es la mitad de la victoria."</p>
+            </div>
+        </div>
+
+        <div class="trainer-card">
+            <div class="trainer-image-area">
+                <img src="ALEXX.jpg" alt="Profesor Alex">
+                <div class="trainer-info">
+                    <h3>Prof. Alex</h3>
+                    <p>Instructor Recreativo/Infantil</p>
+                </div>
+            </div>
+            <div class="trainer-content">
+                <h4>Apto en Formación Infantil</h4>
+                <ul class="trainer-features">
+                    <li>Enseña a niños de manera recreativa y lúdica.</li>
+                    <li>Foco en la disciplina, respeto y coordinación básica.</li>
+                    <li>Clases de Boxeo Básico y movimiento.</li>
+                </ul>
+                <p style="font-style: italic; color: #736D66;">"Construyendo el carácter del guerrero desde la base."</p>
+            </div>
+        </div>
+        
+        <div class="trainer-card">
+            <div class="trainer-image-area">
+                <img src="MESTRE.jpg" alt="Mestre Costa">
+                <div class="trainer-info">
+                    <h3>Mestre. Andre Costa</h3>
+                    <p>Instructor Mentor de BJJ</p>
+                </div>
+            </div>
+            <div class="trainer-content">
+                <h4>El Mestre Costa no es un instructor diario, sino un Pilar Fundamental en la calidad de nuestra academia.</h4>
+                <ul class="trainer-features">
+                    <li>Especialidad: Jiu-Jitsu Brasileño de alto nivel.</li>
+                    <li>Seminarios: Visitas periódicas para actualizaciones técnicas.</li>
+                    <li>Graduación: Autoridad para asistir en las ceremonias de ascenso de rango (cinturones).</li>
+                </ul>
+                <p style="font-style: italic; color: #736D66;">"La experiencia de linaje garantiza la calidad de nuestra enseñanza."</p>
+            </div>
+        </div>
+        
+    </div> 
+</section>
+<section class="contact-section" id="contacto">
+    <h2 class="contact-title">CONTACTO Y UBICACION</h2>
+    <p class="contact-subtitle">Visitanos y comienza tu transformación</p>
+    <div class="contact-container">
+         
+        <div class="contact-info">
+            
+            <h2>INFORMACIÓN DE CONTACTO</h2>
+            
+            <div class="detail-item">
+                <span class="icon">📍</span>
+                <div>
+                    <strong>Dirección</strong>
+                    <p>Secretaria Municipal de Desarrollo Humano GAMO</p>
+                    <p>Cerca de Clínica Cristo Rey</p>
+                    <p>Oruro, Bolivia</p>
+                </div>
+            </div>
+            <div class="redes-flotantes">
+    <a href="https://wa.me/+59176176661" target="_blank" class="whatsapp-flotante" title="Contáctanos por WhatsApp">
+        <img src="WhatsApp_icon.png" alt="WhatsApp" class="whatsapp-img-logo">
+    </a>
+</div>
+            <div class="detail-item">
+                <span class="icon">✉️</span>
+                <div>
+                    <strong>Correo electrónico</strong>
+                    <p>academiammacamara@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="schedule-contact">
+                <h3>Horarios de Atención</h3>
+                <p>Lunes a Viernes: 08:30 AM - 09:30 PM Y 20:00PM - 22:00PM</p>
+                <p>Sábados: 15:00 PM - 17:00 PM</p>
+            </div>
+        </div>
+
+        <div class="location-info">
+            
+            <h2>NUESTRA UBICACIÓN</h2>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps?q= Secretaria Municipal de Desarrollo Humano GAMO,+Oruro,+Bolivia&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+            <div class="directions">
+                <h3>¿Cómo llegar?</h3>
+                <p>Referencia: Cerca de Clínica Cristo Rey.</p>
+                <p>Estacionamiento disponible en la zona.</p>
+            </div>
+            
+        </div>
+        
+    </div>
+</section>
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-col academy-info">
+            <h3 class="footer-title">MMA-CAMARÁ</h3>
+            <p>Más que un gimnasio, somos una comunidad dedicada a forjar guerreros. Entrena con los mejores en artes marciales y deportes de combate.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col quick-links">
+            <h3 class="footer-title">Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="#clases">Nuestras Clases</a></li>
+                <li><a href="#horarios">Horarios</a></li>
+                <li><a href="#entrenadores">Entrenadores</a></li>
+                <li><a href="#productos">Indumentaria</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col contact-info">
+            <h3 class="footer-title">Contacto</h3>
+            <p><span><i class="fas fa-map-marker-alt"></i></span> Secretaria Municipal de Desarrollo Humano GAMO </p>
+            <p>
+         <span><i class="fas fa-phone"></i></span> 
+         <a href="https://wa.me/59176176661" target="_blank" title="Enviar mensaje por WhatsApp">
+            +591 76 17 6 661
+         </a>
+         </p>
+            <p><span><i class="fas fa-envelope"></i></span>academiammacamara@gmail.com</p>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,1242 @@
+    <head>
+      <link rel="stylesheet" href="style.css">
+    </head>
+body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white; 
+        }
+
+       
+        .hero-section {
+            
+            background-image: url('fondito.jfif'); 
+            
+            background-size: cover; 
+            background-position: center; 
+            min-height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .navbar {
+            padding: 15px 30px;
+            background-color: rgba(0, 0, 0, 0.5); 
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* CAMBIO DE COLOR 1: Título de la Academia */
+        .logo-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: dark red ; /* ROJO OSCURO */
+            text-shadow: 0 0 5px black;
+        }
+
+        /* Estilos del Menú de Opciones (Lista) */
+        .nav-menu {
+            list-style: none; /* Quita los puntos de la lista */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px; /* Espacio entre los elementos del menú */
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: color 0.3s;
+            text-transform: uppercase;
+        }
+
+        /* CAMBIO DE COLOR 2: Efecto Hover del Menú */
+        .nav-menu a:hover {
+            color: dark red; /* ROJO OSCURO al pasar el ratón */
+        }
+
+        /* Contenido Central (Logo y Títulos) */
+        .hero-content {
+            flex-grow: 1; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            padding: 20px;
+        }
+
+        .academy-logo {
+            width: 200px; 
+            height: auto;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8)); 
+        }
+
+        .main-title {
+            font-size: 5em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Contenedor de Botones - HORIZONTAL */
+        .button-container {
+            display: flex; 
+            gap: 20px; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+        }
+
+        /* Estilos de los Botones */
+        .hero-button {
+            text-decoration: none; 
+            color: white;
+            border: 2px solid white;
+            padding: 12px 25px;
+            font-size: 1em;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
+            background-color: rgba(255, 255, 255, 0.1); 
+            border-radius: 5px; 
+        }
+
+        /* CAMBIO DE COLOR 3: Efecto Hover del Botón */
+        .hero-button:hover {
+            background-color: darkred; /* ROJO OSCURO al pasar el ratón */
+            border-color: #CC0000;
+            color: white; /* Cambié a blanco para que resalte más sobre el rojo oscuro */
+        }
+
+        /* Media Query para responsividad en móviles */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+            .logo-title {
+                margin-bottom: 10px;
+            }
+            .nav-menu {
+                gap: 10px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .button-container {
+                flex-direction: column; 
+                gap: 15px;
+            }
+            .hero-button {
+                width: 80vw; 
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            .main-title {
+                font-size: 3em; 
+            }
+        }
+        .about-us-section {
+            background-color: black; /* Fondo muy oscuro, casi negro */
+            background-image: linear-gradient(to right, #19171b, #75020f); /* El degradado de negro a rojo */
+            padding: 80px 5%; /* Espacio interno grande */
+            text-align: center;
+            color: white; /* Texto blanco grisáceo */
+        }
+        
+        /* Título ¿QUIÉNES SOMOS? (Grande, bonito y con colorimetría) */
+        .about-us-title {
+            font-size: 3.5em; /* Tamaño grande */
+            color: dark red ; /* Color de acento Rojo */
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            font-weight: 900; /* Negrita/Extra-bold para impacto */
+            letter-spacing: 3px;
+        }
+
+        /* Texto de la respuesta */
+        .about-us-text {
+            font-size: 1.3em;
+            max-width: 900px; /* Limita el ancho del texto para mejor lectura */
+            margin: 0 auto; /* Centra el bloque de texto */
+            line-height: 1.6; /* Espacio entre líneas para facilitar la lectura */
+            font-weight: 300;
+        }
+
+        /* Responsive para móviles */
+        @media (max-width: 600px) {
+            .about-us-title {
+                font-size: 2.5em;
+            }
+            .about-us-text {
+                font-size: 1.1em;
+            }
+        }
+        /* ---------------------------------------------------- */
+        /* Estilos de la Sección NUESTRAS DISCIPLINAS */
+        /* ---------------------------------------------------- */
+        .disciplines-section {
+            background-color: #33080A; /* Fondo oscuro ligeramente diferente */
+            padding: 80px 5%; 
+            text-align: center;
+        }
+
+        /* Título NUESTRAS DISCIPLINAS (Misma tipografía que ¿QUIÉNES SOMOS?) */
+        .disciplines-title {
+            font-size: 3.5em; 
+            color: #FFFFFF; /* Color de acento Rojo */
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            font-weight: 900; 
+            letter-spacing: 3px;
+        }
+
+        /* Contenedor de la Cuadrícula de Disciplinas */
+        .disciplines-grid {
+            display: grid;
+            /* Crea 3 columnas de igual ancho, con un espacio de 30px entre ellas */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilos de cada Cuadro (Disciplina) */
+        .discipline-card {
+            background-color: #0d0d0d; /* Fondo muy oscuro para el cuadro */
+            border: 1px solid rgba(204, 0, 0, 0.3); /* Borde sutil rojo */
+            border-radius: 8px;
+            overflow: hidden; /* Asegura que la imagen no se salga del borde */
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left;
+        }
+        
+        /* Efecto al pasar el ratón */
+        .discipline-card:hover {
+            transform: translateY(-5px); /* Se levanta un poco */
+            box-shadow: 0 10px 20px rgba(204, 0, 0, 0.4); /* Sombra roja */
+        }
+
+        /* Imagen de la Disciplina */
+        .discipline-card img {
+            width: 100%;
+            height: 200px; /* Altura fija para todas las imágenes */
+            object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+        }
+
+        /* Contenido de Texto de la Disciplina */
+        .discipline-content {
+            padding: 20px;
+        }
+
+        .discipline-content h3 {
+            color: #CC0000; /* Título de la disciplina en rojo */
+            text-transform: uppercase;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .discipline-content p {
+            color: #ccc; /* Texto ligeramente gris */
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        .preinscription-button {
+            display: block;
+            width: 90%; 
+            margin: 20px auto 0 auto;
+            background-color: #4D4D4D; 
+            color: #000002; 
+            border: 2px solid #4D4D4D;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efecto Elegante al pasar el ratón: Invertir colores */
+        .preinscription-button:hover {
+            background-color: #AAA8AD; 
+            color: #000002; 
+            box-shadow: 0 0 15px rgba(204, 0, 0, 0.7); 
+        }
+
+        /* Responsive para pantallas muy pequeñas (ajusta la altura de la imagen) */
+        @media (max-width: 600px) {
+            .disciplines-title {
+                font-size: 2.5em;
+            }
+            .discipline-card img {
+                height: 150px;
+            }
+        }
+        /* ---------------------------------------------------- */
+        /* Estilos de la Sección HORARIOS - PALETA MEJORADA */
+        /* ---------------------------------------------------- */
+        .schedule-section {
+            background-color: #313131; /* Fondo Negro Profundo (Paleta) */
+            padding: 80px 5%;
+            text-align: center;
+            color: #FFFFFF; /* Texto Blanco */
+        }
+
+        /* Título HORARIOS */
+        .schedule-title {
+            font-size: 3.5em; 
+            color: #FFFFFF; /* Rojo Brillante (Paleta) */
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            font-weight: 900; 
+            letter-spacing: 3px;
+        }
+
+        /* Estilos para el Bloque de Horarios (Mañana y Noche) */
+        .schedule-block {
+            margin-bottom: 60px;
+        }
+
+        /* Título de los turnos (Mañana/Noche) */
+        .turn-title {
+            font-size: 2.2em;
+            color: #FFFFFF;
+            margin: 0 0 5px;
+            text-transform: uppercase;
+        }
+        
+        /* Subtítulo del turno (Edades/Enfoque) */
+        .turn-subtitle {
+            font-size: 1em;
+            color: #A30404; /* Rojo para destacar la información clave */
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        /* Contenedor principal de la tabla de horarios */
+        .schedule-table-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            /* Borde Gris Sutil de la Paleta */
+            border: 1px solid #736D66; 
+            border-radius: 8px;
+            overflow: hidden; 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); 
+        }
+
+        /* Estilos de la Tabla */
+        .schedule-table {
+            display: grid;
+            grid-template-columns: 1fr repeat(5, 1.2fr); 
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        /* Estilos para las Celdas de la Tabla */
+        .schedule-cell {
+            padding: 15px 10px;
+            border: 1px solid #333; /* Separación oscura */
+            background-color: #04090C; /* Fondo Negro Profundo */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        /* CAMBIO CLAVE: Estilos para el Encabezado de la Tabla (DÍAS) */
+        .schedule-header {
+            background-color: #AAA8AD; /* FONDO GRIS OSCURO (Paleta) */
+            color: #04090C; /* Texto Negro para contraste elegante */
+            font-weight: bold;
+            font-size: 1em;
+            border: 1px solid #736D66;
+        }
+
+        /* Estilos específicos para la columna de las horas */
+        .time-slot {
+            background-color: #1a1a1a; 
+            font-weight: bold;
+            color: #A30404; /* Rojo para acentuar el tiempo */
+        }
+        
+        /* Estilos de celda sin clase */
+        .no-class {
+            background-color: #0d0d0d;
+            color: #555;
+            font-style: italic;
+            font-size: 0.8em;
+        }
+        
+        /* Contenido de la clase */
+        .discipline-name {
+            font-weight: bold;
+            margin-bottom: 2px;
+            color: #FFFFFF; /* Nombre de la clase en blanco */
+        }
+        .discipline-time {
+            font-size: 0.75em;
+            color: #CCCCCC;
+        }
+
+        /* Responsive: Ajustes en pantallas pequeñas */
+        @media (max-width: 700px) {
+            .schedule-table {
+                grid-template-columns: 1fr 1fr; 
+            }
+            .schedule-cell {
+                font-size: 0.8em;
+                padding: 10px 5px;
+            }
+            .schedule-title {
+                font-size: 2.5em;
+            }
+        }
+
+        /* ---------------------------------------------------- */
+        /* Estilos de la Sección PRODUCTOS (EQUIPAMIENTO) */
+        /* ---------------------------------------------------- */
+        .products-section {
+            background-color: #313B44; /* Fondo oscuro intermedio */
+            padding: 80px 5%;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .products-title {
+            font-size: 3.5em; 
+            color: #FFFFFF; /* Título principal en blanco, fuerte contraste */
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: 900; 
+            letter-spacing: 3px;
+        }
+        
+        .products-subtitle {
+            font-size: 1.2em;
+            color: #A30404; /* Subtítulo en rojo */
+            margin-bottom: 50px;
+        }
+
+/* Contenedor de la cuadrícula de productos */
+.products-grid {
+    display: grid;
+    /* 4 columnas en desktop, se ajusta automáticamente */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px; /* Ya lo tenías */
+    margin: 0 auto; /* Ya lo tenías (necesario para centrar el grid completo) */
+
+    /* ✨ ESTO ES CLAVE: Permite que el contenedor del grid se encoja al contenido. */
+    width: fit-content; 
+
+    /* Centra los elementos de la cuadrícula dentro de ese nuevo ancho. */
+    justify-content: center; 
+}
+
+        /* Estilos de cada Tarjeta de Producto */
+        .product-card {
+            background-color: #2e2e2e; /* Fondo de la tarjeta GRIS OSCURO */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+            text-align: left;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Área de la imagen del producto (Fondo blanco/claro) */
+        .product-image-area {
+            background-color: #f0f0f0; /* Fondo Blanco Grisáceo (NO blanco puro) */
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 250px;
+        }
+
+        .product-image-area img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Contenido de la Tarjeta */
+        .product-content {
+            padding: 15px 20px 20px;
+        }
+        
+        .product-content h3 {
+            color: #A30404; /* Título del producto en rojo */
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 1.4em;
+        }
+
+        .product-content p {
+            color: #ccc;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        /* Precio y Botón */
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            border-top: 1px solid #333;
+            padding-top: 15px;
+        }
+
+        .product-price {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #FFFFFF; 
+        }
+
+        .buy-button {
+            text-decoration: none;
+            background-color: #A30404; /* Fondo del botón en Rojo */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+        }
+
+        .buy-button:hover {
+            background-color: #CC0000; /* Rojo más oscuro al pasar el ratón */
+        }
+        
+        /* Etiqueta (Ej: Llamativo) */
+        .product-tag {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #A30404;
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            border-radius: 8px 0 8px 0;
+        }
+
+        /* Estilos de las características del producto */
+        .product-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        
+        .product-features li {
+            text-align: left;
+            font-size: 0.9em;
+            color: #CCCCCC;
+            line-height: 1.5;
+            padding-left: 20px;
+            position: relative;
+        }
+        /* Icono de checkmark personalizado (usando el color de acento) */
+        .product-features li::before {
+            content: '✓'; 
+            color: #A30404; 
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+.trainers-section {
+        background-color: #222222; /* Negro Profundo */
+        padding: 80px 5%;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .trainers-title {
+        font-size: 3.5em; 
+        color: #FFFFFF;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-weight: 900; 
+        letter-spacing: 3px;
+    }
+    
+    .trainers-subtitle {
+        font-size: 1.2em;
+        color: #A30404; /* Rojo de acento */
+        margin-bottom: 50px;
+    }
+
+    .trainers-grid {
+        display: grid;
+        /* 4 columnas para los 4 instructores */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .trainer-card {
+        background-color: #070709; 
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s;
+        text-align: left;
+    }
+    
+    .trainer-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px rgba(163, 4, 4, 0.5); /* Sombra roja al pasar el ratón */
+    }
+
+    .trainer-image-area {
+        height: 350px; 
+        overflow: hidden;
+        position: relative;
+    }
+
+    .trainer-image-area img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        transition: filter 0.3s;
+    }
+    
+    .trainer-card:hover .trainer-image-area img {
+        filter: grayscale(0%) brightness(100%); /* Color al pasar el ratón */
+    }
+
+    .trainer-info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Gradiente oscuro en la parte inferior de la imagen */
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .trainer-info h3 {
+        margin: 0;
+        color: #E62815; /* Rojo de acento */
+        font-size: 1.5em;
+    }
+    
+    .trainer-info p {
+        margin: 5px 0 0;
+        color: #FFFFFF;
+        font-size: 1em;
+    }
+
+    .trainer-content {
+        padding: 20px;
+    }
+    
+    .trainer-content h4 {
+        color: #736D66; /* Gris Oscuro */
+        text-transform: uppercase;
+        font-size: 0.9em;
+        margin-top: 0;
+    }
+
+    .trainer-features {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    
+    .trainer-features li {
+        font-size: 0.9em;
+        color: #CCCCCC;
+        line-height: 1.5;
+        padding-left: 20px;
+        position: relative;
+    }
+    
+    .trainer-features li::before {
+        content: '✓'; 
+        color: #A30404; /* Rojo de acento */
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+    }
+    
+    /* Media Query para responsividad en móviles */
+    @media (max-width: 768px) {
+        .trainers-title {
+            font-size: 2.2em; 
+        }
+        .trainers-grid {
+            grid-template-columns: 1fr;
+        }
+        .trainer-image-area {
+            height: 300px;
+        }
+    }
+    .contact-section {
+        /* Fondo Negro Profundo para la sección completa */
+        background-color: #04090C; 
+        padding: 80px 5%;
+        color: #f5f5f5;
+    }
+    .contact-title {
+        font-size: 3.5em; 
+        color: #FFFFFF;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-weight: 900; 
+        letter-spacing: 3px;
+        text-align: center;
+    }
+    
+    .contact-subtitle {
+        font-size: 1.2em;
+        color: #A30404; /* Rojo de acento */
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr; /* Una columna para info, otra más grande para el mapa */
+        gap: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        /* Contenedor principal con fondo gris muy oscuro para separar visualmente */
+        background-color: #1a1a1a; 
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .contact-info, .location-info {
+        padding: 0;
+    }
+
+    /* Estilo para los títulos H2 */
+    .contact-info h2, .location-info h2 {
+        font-size: 2.2em;
+        color: #FFFFFF; /* Título principal en blanco */
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        font-weight: bold;
+        border-bottom: 3px solid #A30404; /* Línea de acento roja bajo el título */
+        padding-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    /* Contenedor de Detalles (Dirección, Teléfono, Email) */
+    .detail-item {
+        display: flex;
+        align-items: flex-start; /* Alinea íconos arriba */
+        margin-bottom: 20px;
+        font-size: 1.1em;
+    }
+    
+    .detail-item strong {
+        display: block;
+        color: #FFFFFF; /* Texto principal en blanco */
+        margin-bottom: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .detail-item p {
+        margin: 0;
+        color: #CCCCCC; /* Texto secundario en gris claro */
+    }
+
+    /* Ícono */
+    .icon {
+        font-size: 1.5em;
+        color: #A30404; /* Rojo de acento */
+        margin-right: 15px;
+        width: 30px; 
+        text-align: center;
+        /* Para que el ícono tenga forma de círculo, como en el bosquejo */
+        background-color: rgba(163, 4, 4, 0.1); 
+        border-radius: 50%;
+        padding: 5px;
+    }
+
+    /* Horarios de Atención */
+    .schedule-contact h3 {
+        color: #A30404; /* Subtítulo en rojo */
+        font-size: 1.5em;
+        margin-top: 40px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+    
+    .schedule-contact p {
+        margin: 5px 0;
+        color: #CCCCCC;
+    }
+
+    /* Mapa (Contenedor para el iframe) */
+    .map-container {
+        background-color: #04090C; /* Negro Profundo */
+        height: 450px; /* Altura fija para el mapa */
+        border-radius: 8px;
+        overflow: hidden;
+        border: 2px solid #736D66; /* Borde gris sutil */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    }
+    
+    /* Estilo para el iframe del mapa */
+    .map-container iframe {
+        /* Se adapta al tamaño del contenedor .map-container */
+        filter: grayscale(30%) brightness(100%); /* Aplica un filtro oscuro al mapa para integrarlo al tema */
+        transition: filter 0.3s;
+    }
+
+    /* Cómo Llegar */
+    .directions h3 {
+        color: #A30404; /* Subtítulo en rojo */
+        font-size: 1.5em;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+    
+    .directions p {
+        margin: 5px 0;
+        color: #CCCCCC;
+        padding-left: 25px;
+        position: relative;
+    }
+    
+    .directions p::before {
+        content: '•';
+        color: #FFFFFF;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        font-size: 1.2em;
+        top: 0;
+    }
+
+    /* Redes Sociales */
+    .social-media h2 {
+        font-size: 1.8em;
+        color: #A30404; /* Título de redes en rojo */
+        margin-top: 50px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    
+    .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        background-color: #04090C; /* Fondo negro profundo */
+        padding: 10px 15px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #CCCCCC;
+        transition: background-color 0.3s, transform 0.2s;
+        flex-grow: 1;
+        max-width: 250px;
+        border: 1px solid #333;
+    }
+
+    .social-link:hover {
+        background-color: #A30404; /* Rojo de acento al pasar el ratón */
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .social-icon {
+        font-size: 1.2em;
+        margin-right: 10px;
+        color: #A30404; /* Rojo de acento para los íconos de redes (sin hover) */
+    }
+    
+    .social-link:hover .social-icon {
+        color: white;
+    }
+
+    /* Media Queries para Móviles */
+    @media (max-width: 768px) {
+        .contact-container {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 20px;
+        }
+        .contact-info h2, .location-info h2 {
+            font-size: 1.8em;
+        }
+        .map-container {
+            height: 250px;
+        }
+        .social-link {
+            max-width: none;
+        }
+    }
+.navbar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    
+    background-color: #04090C; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    padding: 10px 5%;
+    
+    /* Usamos 'space-between' para empujar los dos extremos, 
+       pero damos más espacio al menú en pantallas grandes */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    box-sizing: border-box;
+}
+
+/* 2. LOGO Y TÍTULO (SOLO TÍTULO) */
+.logo-area {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; 
+    text-decoration: none; 
+}
+
+.logo-title {
+    color: #A30404;
+    /* AJUSTE CLAVE: Reducimos el tamaño de la fuente para que quepa */
+    font-size: 1em; /* Reducido de 1.1em a 1.0em */ 
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    padding: 5px 0;
+    /* Añadimos un margen derecho para separarlo visualmente del menú */
+    margin-right: 20px; 
+}
+
+.logo-area:hover .logo-title {
+    color: #FFFFFF; 
+}
+
+
+/* 3. MENÚ DE ENLACES */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    /* Permitimos que la lista ocupe el espacio restante */
+    flex-grow: 1; 
+    justify-content: flex-end; /* Alinea los enlaces a la derecha */
+}
+
+.nav-menu li {
+    /* AJUSTE CLAVE: Reducimos el margen entre ítems */
+    margin-left: 8px; /* Reducido de 10px a 8px */ 
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    display: block;
+    padding: 8px 6px; /* Reducimos el padding horizontal */
+    transition: color 0.3s, border-bottom 0.3s;
+    text-transform: uppercase;
+    /* AJUSTE CLAVE: Reducimos la fuente del enlace */
+    font-size: 0.8em; /* Reducido de 0.85em a 0.8em */
+}
+
+.nav-menu a:hover {
+    color: #A30404;
+    border-bottom: 2px solid #A30404;
+}
+
+/* 4. AJUSTE DE CONTENIDO */
+body {
+    padding-top: 60px; /* Reducimos ligeramente el padding, ya que el menú es más pequeño */
+}
+
+
+/* 5. RESPONSIVIDAD (Móviles) */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px 5%;
+    }
+
+    .logo-area {
+        width: 100%;
+        justify-content: center; 
+        margin-bottom: 10px;
+        margin-right: 0; /* Quitamos el margen derecho */
+    }
+    
+    .logo-title {
+        font-size: 1em; 
+        text-align: center;
+    }
+
+    .nav-menu {
+        width: 100%;
+        justify-content: space-around; 
+        flex-wrap: wrap;
+    }
+
+    .nav-menu li {
+        margin: 5px 0;
+    }
+    
+    .nav-menu a {
+        font-size: 0.8em;
+    }
+    
+    body {
+        padding-top: 100px; /* Ajustamos para el menú apilado */
+    }
+}
+/* Definición del color Rojo Oscuro/Vibrante */
+:root {
+    --rojo-camara: #A50000; /* Puedes cambiar este valor por #CC3333, #B22222, o el que prefieras */
+    --color-texto: #FFFFFF;
+    --color-gris-claro: #CCCCCC;
+}
+
+.main-footer {
+    /* Fondo ROJO para el pie de página principal */
+    background-color: var(--rojo-camara); 
+    color: var(--color-texto);
+    padding: 40px 0 0; /* Espacio superior, sin espacio inferior en el main-footer */
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 30px; /* Espacio horizontal y parte inferior */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea divisoria sutil */
+}
+
+.footer-col {
+    width: 30%; /* Ajusta el ancho de las columnas */
+    max-width: 350px;
+    margin-right: 20px;
+}
+
+.footer-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--color-texto);
+}
+/* Estilo específico para el título principal del gimnasio */
+.academy-info .footer-title {
+    font-family: serif; /* Simula la tipografía del ejemplo */
+    font-size: 2em;
+    font-weight: normal;
+}
+
+/* --- Columna de Información --- */
+.academy-info p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.social-icons a {
+    color: var(--color-texto);
+    border: 1px solid var(--color-texto);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Columna de Enlaces Rápidos --- */
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links li {
+    margin-bottom: 10px;
+}
+
+.quick-links a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.quick-links a:hover {
+    color: var(--color-gris-claro);
+}
+
+/* --- Columna de Contacto --- */
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+/* --- Sección Inferior de Copyright --- */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+    color: var(--color-gris-claro); /* Texto ligeramente más claro */
+}
+
+.footer-meta {
+    display: flex;
+    align-items: center;
+}
+
+.footer-meta span {
+    margin-right: 20px;
+}
+
+.talk-button {
+    color: var(--color-texto);
+    text-decoration: none;
+    border: 1px solid var(--color-texto);
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.talk-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.talk-button i {
+    margin-right: 5px;
+}
+
+/* ------------------------------------------- */
+/* Media Query para hacerlo responsivo */
+/* ------------------------------------------- */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .footer-col {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .contact-info p {
+        /* Centrar los iconos en móvil */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-meta {
+        margin-top: 15px;
+        flex-direction: column;
+    }
+    
+    .footer-meta span {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+/* --- 1. Posicionamiento del Contenedor Flotante --- */
+.redes-flotantes {
+    position: fixed; 
+    bottom: 50px; 
+    right: 20px; 
+    z-index: 1000; 
+}
+
+/* --- 2. Estilos del Botón (Contenedor Circular) --- */
+.redes-flotantes a {
+    display: flex;          /* Centrado horizontal y vertical */
+    justify-content: center; 
+    align-items: center;    
+    margin-bottom: 15px; 
+    width: 55px;          /* Un poco más grande para que el logo quepa bien */
+    height: 55px; 
+    border-radius: 50%; 
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra un poco más fuerte */
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-flotante {
+    background-color: #25D366; 
+}
+
+.redes-flotantes a:hover {
+    transform: scale(1.1); 
+}
+.whatsapp-img-logo {
+    width: 65%; 
+    height: auto; 
+    display: block;  
+}
+/* Quita el subrayado y hace que el color sea el mismo que el texto normal */
+.footer-col a {
+    text-decoration: none;
+    color: inherit; 
+}

@@ -6,33 +6,18 @@
     <title>ACADEMIA DE ARTES MARCIALES MIXTAS - CAMARÁ</title>
 
     <style>
-
+        /* Estilos Generales y Reseteo Básico */
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
             color: white; 
         }
-        .container {
-            width: 90%; 
-            max-width: 960px; 
-            margin: 0 auto; 
-            padding: 20px;
-        }
 
-        h1 {
-            font-size: 2em;
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.5em; 
-            }
-        }
        
         .hero-section {
             
-            background-image: url('fondito.jfif'); 
+            background-image: url('FONDITO.jfif'); 
             
             background-size: cover; 
             background-position: center; 
@@ -50,22 +35,22 @@
             width: 100%;
             box-sizing: border-box;
         }
+
+        /* CAMBIO DE COLOR 1: Título de la Academia */
         .logo-title {
             font-size: 1.2em;
             font-weight: bold;
             color: dark red ; /* ROJO OSCURO */
             text-shadow: 0 0 5px black;
         }
-           @media (min-width: 768px) {
-          .menu-navegacion {
-        display: flex;
-    }
+
+        /* Estilos del Menú de Opciones (Lista) */
         .nav-menu {
-            list-style: none; 
+            list-style: none; /* Quita los puntos de la lista */
             margin: 0;
             padding: 0;
             display: flex;
-            gap: 25px; 
+            gap: 25px; /* Espacio entre los elementos del menú */
             align-items: center;
         }
 
@@ -77,9 +62,13 @@
             transition: color 0.3s;
             text-transform: uppercase;
         }
+
+        /* CAMBIO DE COLOR 2: Efecto Hover del Menú */
         .nav-menu a:hover {
-            color: dark red; 
+            color: dark red; /* ROJO OSCURO al pasar el ratón */
         }
+
+        /* Contenido Central (Logo y Títulos) */
         .hero-content {
             flex-grow: 1; 
             display: flex;
@@ -90,7 +79,7 @@
         }
 
         .academy-logo {
-            width: 240px; 
+            width: 200px; 
             height: auto;
             margin-bottom: 30px;
             filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8)); 
@@ -109,12 +98,16 @@
             font-style: italic;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
         }
+
+        /* Contenedor de Botones - HORIZONTAL */
         .button-container {
             display: flex; 
             gap: 20px; 
             flex-wrap: wrap; 
             justify-content: center; 
         }
+
+        /* Estilos de los Botones */
         .hero-button {
             text-decoration: none; 
             color: white;
@@ -127,11 +120,15 @@
             background-color: rgba(255, 255, 255, 0.1); 
             border-radius: 5px; 
         }
+
+        /* CAMBIO DE COLOR 3: Efecto Hover del Botón */
         .hero-button:hover {
-            background-color: darkred;
+            background-color: darkred; /* ROJO OSCURO al pasar el ratón */
             border-color: #CC0000;
-            color: white; 
+            color: white; /* Cambié a blanco para que resalte más sobre el rojo oscuro */
         }
+
+        /* Media Query para responsividad en móviles */
         @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
@@ -159,15 +156,17 @@
             }
         }
         .about-us-section {
-            background-color: black; /
-            background-image: linear-gradient(to right, #19171b, #75020f); 
-            padding: 80px 5%; 
+            background-color: black; /* Fondo muy oscuro, casi negro */
+            background-image: linear-gradient(to right, #19171b, #75020f); /* El degradado de negro a rojo */
+            padding: 80px 5%; /* Espacio interno grande */
             text-align: center;
-            color: white; 
+            color: white; /* Texto blanco grisáceo */
         }
+        
+        /* Título ¿QUIÉNES SOMOS? (Grande, bonito y con colorimetría) */
         .about-us-title {
-            font-size: 3.5em;
-            color: dark red ; 
+            font-size: 3.5em; /* Tamaño grande */
+            color: dark red ; /* Color de acento Rojo */
             text-transform: uppercase;
             margin-bottom: 25px;
             font-weight: 900; /* Negrita/Extra-bold para impacto */
@@ -1676,3 +1675,4 @@ body {
 </footer>    
 </body>
 </html>
+

@@ -13,7 +13,23 @@
             font-family: Arial, sans-serif;
             color: white; 
         }
+        .container {
+            width: 90%; 
+            max-width: 960px; 
+            margin: 0 auto; 
+            padding: 20px;
+        }
 
+        h1 {
+            font-size: 2em;
+        }
+
+        /* Media Query para pantallas pequeñas */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em; 
+            }
+        }
        
         .hero-section {
             
@@ -1246,6 +1262,7 @@ body {
     text-decoration: none;
     color: inherit; 
 }
+
   </style>
 </head>
 <body>
@@ -1281,12 +1298,14 @@ body {
         </div>
     </header>
 <section class="about-us-section">
+    <div class="container">
         <h2 class="about-us-title">¿QUIÉNES SOMOS?</h2>
         <p class="about-us-text">
             En MMA-Camará somos más que una Academia de Artes Marciales Mixtas; somos una comunidad dedicada al desarrollo integral de nuestros estudiantes. Nuestra misión es simple: forjar atletas fuertes, disciplinados y seguros de sí mismos, independientemente de su nivel de experiencia.
         </p>
     </section>
 <section class="disciplines-section" id="clases"> 
+    <div class="container">
         <h2 class="disciplines-title">NUESTRAS DISCIPLINAS</h2>
         
         <div class="disciplines-grid">
@@ -1348,6 +1367,7 @@ body {
         </div>
     </section>
 <section class="schedule-section" id="horarios">
+    <div class="container">
         <h2 class="schedule-title">NUESTROS HORARIOS</h2>
 
         <div class="schedule-block">
@@ -1426,6 +1446,7 @@ body {
         </div>
         </section>
 <section class="products-section" id="productos">
+    <div class="container">
         <h2 class="products-title"> NUESTRA INDUMENTARIA</h2>
         <p class="products-subtitle">Equípate con la mejor indumentaria diseñada específicamente para cada disciplina.</p>
         
@@ -1490,6 +1511,7 @@ body {
         </div>
     </section>
 <section class="trainers-section" id="entrenadores">
+    <div class="container">
     <h2 class="trainers-title">NUESTROS ENTRENADORES</h2>
     <p class="trainers-subtitle">Liderando el cambio en el tatami: Conocimiento, disciplina y experiencia.</p>
     
@@ -1574,6 +1596,7 @@ body {
     </div> 
 </section>
 <section class="contact-section" id="contacto">
+    <div class="container">
     <h2 class="contact-title">CONTACTO Y UBICACION</h2>
     <p class="contact-subtitle">Visitanos y comienza tu transformación</p>
     <div class="contact-container">
@@ -1673,4 +1696,5 @@ body {
 
 </footer>
 </body>
+
 </html>

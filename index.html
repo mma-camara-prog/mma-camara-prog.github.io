@@ -13,6 +13,24 @@
             font-family: Arial, sans-serif;
             color: white; 
         }
+          .container {
+    width: 90%; /* Ancho del 90% del dispositivo */
+    max-width: 960px; /* Ancho máximo para evitar que se vea muy ancho en pantallas grandes */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em; /* Tamaño de fuente relativo */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+}
+
         .hero-section {
             background-image: url('fondito.jfif'); 
             background-size: cover; 
@@ -1672,3 +1690,4 @@ body {
 </footer>    
 </body>
 </html>
+

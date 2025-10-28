@@ -127,10 +127,29 @@
             border-color: #CC0000;
             color: white; /* Cambié a blanco para que resalte más sobre el rojo oscuro */
         }
-         /* 📱 Diseño responsive para móviles */
+
+/* 📱 Diseño responsive para móviles */
 @media (max-width: 768px) {
 
-    /* Ícono hamburguesa visible solo en móvil */
+    /* Menú: pasa de horizontal a vertical */
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px; /* Ajusta según la altura de tu header */
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        display: none; /* Oculto por defecto (se mostrará al presionar el ícono) */
+    }
+
+    .nav-menu.active {
+        display: flex; /* Se muestra cuando se activa */
+    }
+
+    /* Ícono hamburguesa (☰) */
     .menu-toggle {
         display: block;
         color: white;
@@ -141,34 +160,15 @@
         position: absolute;
         top: 15px;
         right: 20px;
-        z-index: 2000;
+        z-index: 1000;
     }
 
-    /* Menú vertical oculto por defecto */
-    .nav-menu {
-        flex-direction: column;
-        gap: 15px;
-        background-color: rgba(0, 0, 0, 0.95);
-        position: absolute;
-        top: 60px; /* ajusta según tu header */
-        left: 0;
-        width: 100%;
-        padding: 20px 0;
-        text-align: center;
-        display: none; /* 🚨 Esto es lo que lo oculta al inicio */
-        z-index: 1500;
-    }
-
-    /* Menú visible cuando tiene la clase “active” */
-    .nav-menu.active {
-        display: flex;
-    }
-
-    /* Ajustes del resto del contenido */
+    /* Ajusta el contenido central */
     .hero-content {
         padding-top: 80px;
     }
 
+    /* Reduce tamaños de texto para pantallas pequeñas */
     .main-title {
         font-size: 2.5em;
         text-align: center;
@@ -1339,59 +1339,26 @@ body {
     text-decoration: none;
     color: inherit; 
 }
-        /* ==== Ajustes para móviles ==== */
-@media screen and (max-width: 768px) {
-
-  /* El menú se vuelve vertical y centrado */
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-
-  /* Si tienes un logo o imagen al lado del menú */
-  nav img {
-    width: 80px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-
-  /* Ajustes del fondo y espaciado */
-  nav {
-    flex-direction: column;
-    background-color: #000; /* o el color que uses */
-    padding: 15px;
-  }
-
-  /* Texto del menú más pequeño si se ve muy grande */
-  nav a {
-    font-size: 16px;
-  }
-}
-
   </style>
 </head>
 <body>
-<header>
-  <button class="menu-toggle" onclick="document.querySelector('.nav-menu').classList.toggle('active')">
-    ☰
-  </button>
 
-  <ul class="nav-menu">
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#clases">Clases</a></li>
-    <li><a href="#horarios">Horarios</a></li>
-    <li><a href="#productos">Indumentaria</a></li>
-    <li><a href="#entrenadores">Entrenadores</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
-  
+<header class="hero-section">       
+<nav class="navbar">
+    <a href="index.html" class="logo-area">
+        <div class="logo-title">ACADEMIA DE ARTES MARCIALES MIXTAS - CAMARÁ</div>
+    </a>
+    
+    <ul class="nav-menu">
+        <li><a href="#inicio">INICIO</a></li>
+        <li><a href="#clases">CLASES</a></li>
+        <li><a href="#horarios">HORARIOS</a></li>
+        <li><a href="#productos">INDUMENTARIA</a></li>
+        <li><a href="#entrenadores">ENTRENADORES</a></li>
+        <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+</nav>
+        
         <div class="hero" id="inicio">
             
             <img src="logoCAMARÁ.png" alt="Logo de la Academia Camará" class="academy-logo">
@@ -1799,7 +1766,4 @@ body {
 
 </footer>
 </body>
-
 </html>
-
-

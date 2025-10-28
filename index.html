@@ -149,19 +149,6 @@
         display: flex; /* Se muestra cuando se activa */
     }
 
-    /* Ícono hamburguesa (☰) */
-    .menu-toggle {
-        display: block;
-        color: white;
-        font-size: 1.8em;
-        cursor: pointer;
-        background: none;
-        border: none;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        z-index: 1000;
-    }
 
     /* Ajusta el contenido central */
     .hero-content {
@@ -1339,6 +1326,68 @@ body {
     text-decoration: none;
     color: inherit; 
 }
+        /* --- ESTILO BASE DEL MENÚ (desktop) --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 15px 30px;
+  position: relative;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: red;
+}
+
+/* Botón hamburguesa (invisible en desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* --- VERSIÓN MÓVIL --- */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .nav-menu.show {
+    display: flex; /* Se muestra al activar */
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -1348,7 +1397,7 @@ body {
     <a href="index.html" class="logo-area">
         <div class="logo-title">ACADEMIA DE ARTES MARCIALES MIXTAS - CAMARÁ</div>
     </a>
-    
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     <ul class="nav-menu">
         <li><a href="#inicio">INICIO</a></li>
         <li><a href="#clases">CLASES</a></li>
@@ -1765,5 +1814,17 @@ body {
     </div>
 
 </footer>
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+  });
+</script>
+
 </body>
+
 </html>

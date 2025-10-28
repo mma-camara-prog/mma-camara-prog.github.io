@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACADEMIA DE ARTES MARCIALES MIXTAS - CAMARÁ</title>
-
+    
     <style>
         /* Estilos Generales y Reseteo Básico */
         body {
@@ -13,26 +13,12 @@
             font-family: Arial, sans-serif;
             color: white; 
         }
-          .container {
-    width: 90%; /* Ancho del 90% del dispositivo */
-    max-width: 960px; /* Ancho máximo para evitar que se vea muy ancho en pantallas grandes */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    padding: 20px;
-}
 
-h1 {
-    font-size: 2em; /* Tamaño de fuente relativo */
-}
-
-/* Media Query para pantallas pequeñas */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 1.5em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
-    }
-}
-
+       
         .hero-section {
+            
             background-image: url('fondito.jfif'); 
+            
             background-size: cover; 
             background-position: center; 
             min-height: 100vh; 
@@ -142,33 +128,67 @@ h1 {
             color: white; /* Cambié a blanco para que resalte más sobre el rojo oscuro */
         }
 
-        /* Media Query para responsividad en móviles */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                padding: 15px;
-            }
-            .logo-title {
-                margin-bottom: 10px;
-            }
-            .nav-menu {
-                gap: 10px;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            .button-container {
-                flex-direction: column; 
-                gap: 15px;
-            }
-            .hero-button {
-                width: 80vw; 
-                max-width: 300px;
-                margin: 0 auto;
-            }
-            .main-title {
-                font-size: 3em; 
-            }
-        }
+/* 📱 Diseño responsive para móviles */
+@media (max-width: 768px) {
+
+    /* Menú: pasa de horizontal a vertical */
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px; /* Ajusta según la altura de tu header */
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        display: none; /* Oculto por defecto (se mostrará al presionar el ícono) */
+    }
+
+    .nav-menu.active {
+        display: flex; /* Se muestra cuando se activa */
+    }
+
+    /* Ícono hamburguesa (☰) */
+    .menu-toggle {
+        display: block;
+        color: white;
+        font-size: 1.8em;
+        cursor: pointer;
+        background: none;
+        border: none;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    /* Ajusta el contenido central */
+    .hero-content {
+        padding-top: 80px;
+    }
+
+    /* Reduce tamaños de texto para pantallas pequeñas */
+    .main-title {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .academy-logo {
+        width: 150px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
         .about-us-section {
             background-color: black; /* Fondo muy oscuro, casi negro */
             background-image: linear-gradient(to right, #19171b, #75020f); /* El degradado de negro a rojo */
@@ -586,6 +606,65 @@ h1 {
             position: absolute;
             left: 0;
         }
+        /* 📱 Diseño responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+
+    /* Ajusta el espaciado general */
+    .products-section {
+        padding: 40px 5%;
+    }
+
+    .products-title {
+        font-size: 2em;
+        letter-spacing: 1px;
+    }
+
+    .products-subtitle {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    /* Cuadrícula más simple en celular (1 producto por fila) */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 100%;
+    }
+
+    /* Tarjetas más ligeras y con menos sombra */
+    .product-card {
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .product-image-area {
+        min-height: 180px;
+        padding: 10px 0;
+    }
+
+    .product-content {
+        padding: 10px 15px 15px;
+    }
+
+    .product-content h3 {
+        font-size: 1.2em;
+    }
+
+    .product-footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .product-price {
+        font-size: 1.4em;
+    }
+
+    .buy-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
 .trainers-section {
         background-color: #222222; /* Negro Profundo */
         padding: 80px 5%;
@@ -1295,14 +1374,12 @@ body {
         </div>
     </header>
 <section class="about-us-section">
-    <div class="container">
         <h2 class="about-us-title">¿QUIÉNES SOMOS?</h2>
         <p class="about-us-text">
             En MMA-Camará somos más que una Academia de Artes Marciales Mixtas; somos una comunidad dedicada al desarrollo integral de nuestros estudiantes. Nuestra misión es simple: forjar atletas fuertes, disciplinados y seguros de sí mismos, independientemente de su nivel de experiencia.
         </p>
     </section>
 <section class="disciplines-section" id="clases"> 
-    <div class="container">
         <h2 class="disciplines-title">NUESTRAS DISCIPLINAS</h2>
         
         <div class="disciplines-grid">
@@ -1364,7 +1441,6 @@ body {
         </div>
     </section>
 <section class="schedule-section" id="horarios">
-    <div class="container">
         <h2 class="schedule-title">NUESTROS HORARIOS</h2>
 
         <div class="schedule-block">
@@ -1507,7 +1583,6 @@ body {
         </div>
     </section>
 <section class="trainers-section" id="entrenadores">
-    <div class="container">
     <h2 class="trainers-title">NUESTROS ENTRENADORES</h2>
     <p class="trainers-subtitle">Liderando el cambio en el tatami: Conocimiento, disciplina y experiencia.</p>
     
@@ -1597,6 +1672,7 @@ body {
     <div class="contact-container">
          
         <div class="contact-info">
+            
             <h2>INFORMACIÓN DE CONTACTO</h2>
             
             <div class="detail-item">
@@ -1653,7 +1729,7 @@ body {
         </div>
         
     </div>
-   </section>
+</section>
 <footer class="main-footer">
     <div class="footer-content">
         <div class="footer-col academy-info">
@@ -1687,8 +1763,7 @@ body {
             <p><span><i class="fas fa-envelope"></i></span>academiammacamara@gmail.com</p>
         </div>
     </div>
-</footer>    
+
+</footer>
 </body>
 </html>
-
-

@@ -1339,6 +1339,42 @@ body {
     text-decoration: none;
     color: inherit; 
 }
+        /* ==== Ajustes para móviles ==== */
+@media screen and (max-width: 768px) {
+
+  /* El menú se vuelve vertical y centrado */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* Si tienes un logo o imagen al lado del menú */
+  nav img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Ajustes del fondo y espaciado */
+  nav {
+    flex-direction: column;
+    background-color: #000; /* o el color que uses */
+    padding: 15px;
+  }
+
+  /* Texto del menú más pequeño si se ve muy grande */
+  nav a {
+    font-size: 16px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -1765,4 +1801,5 @@ body {
 </body>
 
 </html>
+
 
